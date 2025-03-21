@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istilah Latin Farmasi</title>
+</head>
+<body>
+    <h1>Daftar Istilah Latin Farmasi</h1>
+    <form method="post" action="/search">
+        <input type="text" name="query" placeholder="Cari istilah...">
+        <button type="submit">Cari</button>
+    </form>
+    <ul>
+        {% for item in data %}
+            <li><b>{{ item['Istilah Latin'] }}</b>: {{ item['Terjemahan'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
